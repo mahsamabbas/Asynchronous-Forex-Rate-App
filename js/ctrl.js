@@ -20,7 +20,7 @@ app.controller('rateappCtrl', function($scope, $http) {
 
     // Function to get the data
     $scope.getData = function(){
-      $http.get('http://dollareast.com/api_json/get_all_rates')
+      $http.get('data/rates.json')
         .success(function(data, status, headers, config) {
 
 
