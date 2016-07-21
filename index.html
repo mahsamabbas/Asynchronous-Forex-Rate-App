@@ -1,0 +1,408 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Dollar East Exchange | RateSheet Application</title>
+ <link href='https://fonts.googleapis.com/css?family=Oswald:400' rel='stylesheet' type='text/css'>
+ <!-- CSS Files -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <!-- JS Files -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.js"></script>
+  <script type="text/javascript" src="js/angular.js"></script>
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-4VNBReECX_wZfWzlyM8noro_Om79zDg" type="text/javascript"></script> 
+  
+</head>
+
+<body ng-app="myApp">
+  <div class="container" ng-controller="rateappCtrl">
+  <div class="row">
+    <div class="well well-sm title_bread_crumb">
+      Dollar East Forex Rates
+    </div>
+
+     <div class="well well-sm date_bread_crumb">
+        {{n }} &nbsp; {{time}} (PST)
+    </div>
+  </div>
+  <div class="row main_section">
+    <div class="bs-example" data-example-id="bordered-table"> 
+    <table class="table table-bordered"> 
+    <thead> 
+    <tr>
+
+    <th>Country</th> 
+    <th>Currency</th>
+     <th>Low</th>
+      <th>High</th> 
+      </tr> 
+      </thead> 
+      <tbody> 
+
+      <!-- USD -->
+      <tr>
+       <td>
+       <span class="flag">
+         <img src="images/usa_flag.jpg">
+       </span>
+       <p style="margin-right: 50px;">USA</p>
+       </td> 
+       <td>
+       <p>
+       USD
+       </p>
+       </td> 
+       <td>
+       <p>{{usd_buying  | number:2}}</p>
+       </td>
+        <td>
+        <p>{{usd_selling  | number:2}}</p></td>
+         </tr> 
+
+         <!-- Europe -->
+         <tr>
+       <td>
+       <span class="flag">
+         <img src="images/europe_flag.png">
+       </span>
+       <p style="margin-right: 50px;">EUROPE</p>
+       </td> 
+       <td>
+       <p>
+       EUR
+       </p>
+       </td> 
+       <td>
+       <p>{{eur_buying | number:2}}</p>
+       </td>
+        <td>
+        <p>{{eur_selling  | number:2}}</p></td>
+         </tr> 
+
+         <!-- GDP -->
+         <tr>
+       <td>
+       <span class="flag">
+         <img src="images/britian_flag.png">
+       </span>
+       <p style="margin-right: 50px;">GREAT BRITIAN</p>
+       </td> 
+       <td>
+       <p>
+       GDP
+       </p>
+       </td> 
+       <td>
+       <p>{{gbp_buying  | number:2}}</p>
+       </td>
+        <td>
+        <p>{{gbp_selling  | number:2}}</p></td>
+         </tr> 
+
+         <!-- JAPAN -->
+         <tr>
+       <td>
+       <span class="flag">
+         <img src="images/japan_flag.png">
+       </span>
+       <p style="margin-right: 50px;">JAPAN</p>
+       </td> 
+       <td>
+       <p>
+       YEN
+       </p>
+       </td> 
+       <td>
+       <p>{{yen_buying  | number:2}}</p>
+       </td>
+        <td>
+        <p>{{yen_selling  | number:2}}</p></td>
+         </tr> 
+
+         <!-- CANADA -->
+
+          <tr>
+       <td>
+       <span class="flag">
+         <img src="images/canada_flag.png">
+       </span>
+       <p style="margin-right: 50px;">CANADA</p>
+       </td> 
+       <td>
+       <p>
+       CAD
+       </p>
+       </td> 
+       <td>
+       <p>{{cad_buying  | number:2}}</p>
+       </td>
+        <td>
+        <p>{{cad_selling  | number:2}}</p></td>
+         </tr> 
+
+         <!-- HONGKONG -->
+            <tr>
+         <td>
+         <span class="flag">
+           <img src="images/hongkong_flag.png">
+         </span>
+         <p style="margin-right: 50px;">HONG KONG</p>
+         </td> 
+         <td>
+         <p>
+         HKD
+         </p>
+         </td> 
+         <td>
+         <p>{{hkd_buying  | number:2}}</p>
+         </td>
+          <td>
+          <p>{{hkd_selling  | number:2}}</p></td>
+           </tr>
+
+           <!-- UAE -->
+
+           <tr>
+         <td>
+         <span class="flag">
+           <img src="images/uae_flag.png">
+         </span>
+         <p style="margin-right: 50px;">UAE</p>
+         </td> 
+         <td>
+         <p>
+         AED
+         </p>
+         </td> 
+         <td>
+         <p>{{uae_buying  | number:2}}</p>
+         </td>
+          <td>
+          <p>{{uae_selling  | number:2}}</p></td>
+           </tr>
+
+           <!-- SAUDIA -->
+
+           <tr>
+         <td>
+         <span class="flag">
+           <img src="images/saudiarabia_flag.png">
+         </span>
+         <p style="margin-right: 50px;">SAUDI ARABIA</p>
+         </td> 
+         <td>
+         <p>
+         SAR
+         </p>
+         </td> 
+         <td>
+         <p>{{sr_buying  | number:2}}</p>
+         </td>
+          <td>
+          <p>{{sr_selling  | number:2}}</p></td>
+           </tr>
+
+
+           <!-- KUWAIT -->
+
+           <tr>
+         <td>
+         <span class="flag">
+           <img src="images/kuwait_flag.png">
+         </span>
+         <p style="margin-right: 50px;">KUWAIT</p>
+         </td> 
+         <td>
+         <p>
+         KWD
+         </p>
+         </td> 
+         <td>
+         <p>{{kd_buying  | number:2}}</p>
+         </td>
+          <td>
+          <p>{{kd_selling  | number:2}}</p></td>
+           </tr>
+
+           <!-- AUSTRALIA -->
+
+           <tr>
+         <td>
+         <span class="flag">
+           <img src="images/australia_flag.png">
+         </span>
+         <p style="margin-right: 50px;">AUSTRALIA</p>
+         </td> 
+         <td>
+         <p>
+         AUD
+         </p>
+         </td> 
+         <td>
+         <p>{{aud_buying  | number:2}}</p>
+         </td>
+          <td>
+          <p>{{aud_selling  | number:2}}</p></td>
+           </tr>
+
+           <!-- SWEDEN -->
+
+           <tr>
+         <td>
+         <span class="flag">
+           <img src="images/sweden_flag.png">
+         </span>
+         <p style="margin-right: 50px;">SWEDEN</p>
+         </td> 
+         <td>
+         <p>
+         SEK
+         </p>
+         </td> 
+         <td>
+         <p>{{sk_buying  | number:2}}</p>
+         </td>
+          <td>
+          <p>{{sk_selling  | number:2}}</p></td>
+           </tr>
+
+           <!-- DENMARK -->
+
+           <tr>
+         <td>
+         <span class="flag">
+           <img src="images/denmark_flag.png">
+         </span>
+         <p style="margin-right: 50px;">DENMARK</p>
+         </td> 
+         <td>
+         <p>
+         DKK
+         </p>
+         </td> 
+         <td>
+         <p>{{dk_buying  | number:2}}</p>
+         </td>
+          <td>
+          <p>{{dk_selling  | number:2}}</p></td>
+           </tr>
+
+           <!-- NORWAY -->
+
+           <tr>
+         <td>
+         <span class="flag">
+           <img src="images/norway_flag.png">
+         </span>
+         <p style="margin-right: 50px;">NORWAY</p>
+         </td> 
+         <td>
+         <p>
+         NOK
+         </p>
+         </td> 
+         <td>
+         <p>{{nk_buying  | number:2}}</p>
+         </td>
+          <td>
+          <p>{{nk_selling  | number:2}}</p></td>
+           </tr>
+
+           <!-- SINGAPORE -->
+
+           <tr>
+         <td>
+         <span class="flag">
+           <img src="images/singapore_flag.png">
+         </span>
+         <p style="margin-right: 50px;">SINGAPORE</p>
+         </td> 
+         <td>
+         <p>
+         SGD
+         </p>
+         </td> 
+         <td>
+         <p>{{sf_buying  | number:2}}</p>
+         </td>
+          <td>
+          <p>{{sf_selling  | number:2}}</p></td>
+           </tr>
+
+           <!-- QATAR -->
+
+           <tr>
+         <td>
+         <span class="flag">
+           <img src="images/qatar_flag.png">
+         </span>
+         <p style="margin-right: 50px;">QATAR</p>
+         </td> 
+         <td>
+         <p>
+         QAR
+         </p>
+         </td> 
+         <td>
+         <p>{{qr_buying  | number:2}}</p>
+         </td>
+          <td>
+          <p>{{qr_selling  | number:2}}</p></td>
+           </tr>
+
+            <!-- OMAN -->
+
+           <tr>
+         <td>
+         <span class="flag">
+           <img src="images/oman_flag.png">
+         </span>
+         <p style="margin-right: 50px;">OMAN</p>
+         </td> 
+         <td>
+         <p>
+         OMR
+         </p>
+         </td> 
+         <td>
+         <p>{{or_buying  | number:2}}</p>
+         </td>
+          <td>
+          <p>{{or_selling  | number:2}}</p></td>
+           </tr>
+
+            <!-- BAHRAIN -->
+
+           <tr>
+         <td>
+         <span class="flag">
+           <img src="images/bahrain_flag.png">
+         </span>
+         <p style="margin-right: 50px;">BAHRAIN</p>
+         </td> 
+         <td>
+         <p>
+         BHD
+         </p>
+         </td> 
+         <td>
+         <p>{{bhr_buying  | number:2}}</p>
+         </td>
+          <td>
+          <p>{{bhr_selling  | number:2}}</p></td>
+           </tr>
+         </tbody> 
+         </table> 
+    </div>
+
+    <p class="note_text">*Note: The Rates Are Indicative Only.Please visit the nearest branch for updated information.</p>
+  </div>
+ 
+  </div>
+  <script type="text/javascript" src="js/ctrl.js"></script>
+</body>
+
+</html>
+

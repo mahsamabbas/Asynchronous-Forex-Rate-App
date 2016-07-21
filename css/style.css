@@ -1,0 +1,76 @@
+body{
+	font-family: 'Oswald', sans-serif;
+	font-weight: lighter;
+    letter-spacing: 1px;
+
+}
+body, .container,  #map {
+    width: 810px;
+    height: 666px;
+}
+.title_bread_crumb{
+	background: #183884;
+    margin-top: -1px;
+    margin-left: -1px;
+    border-radius: 0;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 2px;
+}
+.date_bread_crumb{
+	background: #E66E05;
+    padding: 5px;
+    border-radius: 0;
+    margin-left: -1px;
+    color: white;
+    text-align: center;
+    font-weight: 100;
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+.main_section{
+    padding-left: 25px;
+    padding-right: 25px;
+    background: #E0E0E0;
+    padding-top: 20px;
+}
+.table-bordered thead{
+	background: #183884;
+    color: white;
+    font-size: 15px;
+    font-weight: normal;
+}
+.table-bordered thead tr th{
+	text-align: center;
+    text-transform: uppercase;
+}
+.table-bordered tbody{
+	background: #efefef;
+}
+.table-bordered tbody tr td{
+	text-align: center;
+    color: #696666;
+    font-size: 16px;
+}
+.flag{
+	float: left;
+}
+.flag img{
+   width: 50px;
+}
+p{
+	padding-top: 4px;
+    margin-bottom: 4px;
+}
+.note_text{
+    text-align: center;
+    text-transform: UPPERCASE;
+    letter-spacing: 1px;
+    font-size: 12px;
+    color: #4a4a4a;
+    margin-bottom:10px;
+}
+.table{
+    margin-bottom: 10px;
+}
